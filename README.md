@@ -1,40 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# ThroMind AI Assistant 🚀
 
-## Getting Started
+![ThroMind Logo](./app/assets/thromindLogo.png)
 
-First, run the development server:
+A next-generation, AI-powered conversational assistant designed for **ThroMind**, a leading technology company based in Sudan. The application serves as an intelligent agent capable of answering questions regarding products, pricing, policies, and general company information, natively supporting both Arabic and English.
 
-```bash
+## ✨ Features
+
+- **Intelligent Knowledge Base**: Uses a customized JSON knowledge base (`thromind.json`) to accurately respond to customer inquiries.
+- **Bilingual Support**: Fluent in both English and Arabic, automatically responding in the user's preferred language.
+- **Modern UI Edge**: Premium dark-mode interface with glassmorphism, fluid animations (typing indicators), and robust responsiveness built purely with custom CSS.
+- **Vercel AI SDK Integration**: Utilizes the official `ai` and `@ai-sdk/openai` packages for seamless streaming of LLM outputs.
+- **Rate Limit & Error Handling**: Gracefully handles API failures and quota limits with localized user-friendly warnings.
+- **Dockerized**: Fully equipped with a Next.js optimized multi-stage `Dockerfile` and `standalone` output for efficient and lightweight containerized deployment.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Directory)
+- **Language**: TypeScript
+- **AI/LLM**: [OpenAI GPT-4o-mini](https://openai.com/) via [Vercel AI SDK v3](https://sdk.vercel.ai/docs)
+- **Database Prep**: DataStax AstraDB / LangChain *(for optional advanced vector searching)*
+- **Styling**: Vanilla Custom CSS
+- **Containerization**: Docker
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+Before you start, ensure you have the following installed on your machine:
+- **Node.js** (v18 or higher)
+- **npm** or **yarn**
+- **Docker** (optional, for containerized run)
+
+### 1. Clone the repository
+\`\`\`bash
+git clone https://github.com/mosab3482/ThorMind-AI.git
+cd thromind_ai
+\`\`\`
+
+### 2. Environment Variables
+Create a `.env` file in the root of your project and populate it with your keys.
+\`\`\`env
+# OpenAI
+OPENAI_API_KEY="sk-proj-your-api-key"
+
+# Astra DB (If using the vector DB module)
+ASTRA_DB_NAMESPACE="default_keyspace"
+ASTRA_DB_COLLECTION="ThorMindAI"
+ASTRA_DB_API_ENDPOINT="https://..."
+ASTRA_DB_APPLICATION_TOKEN="AstraCS:..."
+\`\`\`
+
+*(Note: The current configuration primarily relies on the local JSON file located at `app/data/thromind.json` for high-speed local inference, saving database costs).*
+
+### 3. Local Development Run (Node.js)
+Install the dependencies and start the development server.
+\`\`\`bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
+Open [http://localhost:3000](http://localhost:3000) in your browser to start chatting with the AI!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 🐳 Docker Deployment
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+The application utilizes the Next.js `standalone` output feature to create extremely optimized, minimal-size Docker images.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+**1. Build the Docker Image**
+\`\`\`bash
+docker build -t thromind-ai:latest .
+\`\`\`
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**2. Run the Docker Container**
+You must pass your `.env` file to the container so that it can access the OpenAI API key.
+\`\`\`bash
+docker run -p 3000:3000 --env-file .env thromind-ai:latest
+\`\`\`
 
-## Learn More
+The app will now be available on [http://localhost:3000](http://localhost:3000).
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## 📂 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+\`\`\`text
+.
+├── app/
+│   ├── api/
+│   │   └── chat/route.ts      # Main API endpoint for OpenAI streaming
+│   ├── assets/                # Logos and Images
+│   ├── components/            # Reusable UI Components (Bubble, Loader, Prompts)
+│   ├── data/                  # Company Knowledge Base (thromind.json)
+│   ├── global.css             # Premium styling
+│   ├── layout.tsx             # Root layout and metadata
+│   └── page.tsx               # Main Chat UI Page
+├── scripts/
+│   └── loadDb.ts              # Script for seeding Astra DB embeddings
+├── .dockerignore
+├── Dockerfile                 # Multi-stage optimized Docker build instructions
+└── next.config.ts             # Configured for "standalone" output
+\`\`\`
 
-## Deploy on Vercel
+## 📝 Modifying the Knowledge Base
+To update the Company's details, products, pricing (currently strictly set in **USD**), or policies, simply edit the `app/data/thromind.json` file. The AI system prompt dynamically pulls data from this JSON file on every request, ensuring the AI always has the latest information.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-# Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+**Developed for ThroMind AI Assistant.** 
+*Khartoum, Sudan* — *support@thromind.com*
