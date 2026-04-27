@@ -1,0 +1,401 @@
+{
+  "company": {
+    "name": "MHDTech",
+    "tagline": "Next-Generation Technology Solutions",
+    "slogan": "Empowering Your Digital Future",
+    "founded": 2018,
+    "country": "United Arab Emirates",
+    "headquarters": "Dubai Internet City, Dubai, UAE",
+    "email": "support@mhdtech.com",
+    "sales_email": "sales@mhdtech.com",
+    "phone": "+249 92 316 2716",
+    "whatsapp": "+249 92 316 2716",
+    "website": "www.mhdtech.com",
+    "working_hours": "Sunday – Thursday: 9:00 AM – 6:00 PM (GMT+4)",
+    "languages": [
+      "Arabic",
+      "English"
+    ],
+    "social_media": {
+      "twitter": "@MHDTech",
+      "linkedin": "linkedin.com/company/mhdtech",
+      "instagram": "@mhdtech.official",
+      "youtube": "youtube.com/MHDTech"
+    },
+    "about": "MHDTech is a leading UAE-based technology company founded in 2018, specializing in AI-powered software solutions, cloud infrastructure, cybersecurity services, and full-scale digital transformation. We serve over 500 clients across the GCC region, helping businesses modernize their operations and unlock the power of artificial intelligence. Our team of 120+ engineers and specialists is dedicated to delivering world-class technology products with unmatched support."
+  },
+  "products": [
+    {
+      "id": "P001",
+      "name": "MHDChat AI",
+      "category": "Artificial Intelligence",
+      "description": "An enterprise-grade AI chatbot platform that integrates with your website, app, or CRM. Supports Arabic and English, trained on your business data.",
+      "price": {
+        "monthly": 299,
+        "annual": 2870,
+        "currency": "AED",
+        "note": "Annual plan saves 20%"
+      },
+      "features": [
+        "Custom AI training on your data",
+        "Arabic & English support",
+        "Website & WhatsApp integration",
+        "Analytics dashboard",
+        "Unlimited conversations",
+        "24/7 uptime SLA"
+      ]
+    },
+    {
+      "id": "P002",
+      "name": "MHDCloud Hosting",
+      "category": "Cloud Infrastructure",
+      "description": "Scalable cloud hosting solutions powered by our private UAE datacenter with 99.99% uptime guarantee and full TDRA compliance.",
+      "price": {
+        "starter": {
+          "monthly": 49,
+          "storage": "50GB",
+          "bandwidth": "500GB"
+        },
+        "business": {
+          "monthly": 149,
+          "storage": "250GB",
+          "bandwidth": "2TB"
+        },
+        "enterprise": {
+          "monthly": 499,
+          "storage": "1TB",
+          "bandwidth": "Unlimited"
+        },
+        "currency": "AED"
+      },
+      "features": [
+        "UAE-based datacenter",
+        "99.99% Uptime SLA",
+        "Free SSL certificate",
+        "Daily backups",
+        "DDoS protection",
+        "24/7 technical support"
+      ]
+    },
+    {
+      "id": "P003",
+      "name": "MHDSecure",
+      "category": "Cybersecurity",
+      "description": "Comprehensive cybersecurity suite including firewall management, penetration testing, vulnerability assessments, and real-time threat monitoring.",
+      "price": {
+        "basic": {
+          "monthly": 599,
+          "description": "Basic protection for SMEs"
+        },
+        "advanced": {
+          "monthly": 1499,
+          "description": "Advanced threat intelligence"
+        },
+        "enterprise": {
+          "monthly": 3999,
+          "description": "Full SOC-as-a-Service"
+        },
+        "currency": "AED"
+      },
+      "features": [
+        "Real-time threat monitoring",
+        "Penetration testing (quarterly)",
+        "Incident response team",
+        "Compliance reporting",
+        "Employee security training",
+        "ISO 27001 alignment"
+      ]
+    },
+    {
+      "id": "P004",
+      "name": "MHDERP",
+      "category": "Business Software",
+      "description": "A complete cloud-based ERP system tailored for GCC businesses. Covers finance, HR, procurement, inventory, and CRM in one unified platform.",
+      "price": {
+        "startup": {
+          "monthly": 399,
+          "users": "up to 10 users"
+        },
+        "growth": {
+          "monthly": 899,
+          "users": "up to 50 users"
+        },
+        "enterprise": {
+          "monthly": 2499,
+          "users": "Unlimited users"
+        },
+        "currency": "AED",
+        "note": "One-time setup fee: AED 2,000 – 5,000 depending on plan"
+      },
+      "features": [
+        "Full Arabic UI support",
+        "VAT-compliant invoicing",
+        "Payroll & HR management",
+        "Inventory control",
+        "Multi-branch support",
+        "Mobile app included"
+      ]
+    },
+    {
+      "id": "P005",
+      "name": "MHDAnalytics",
+      "category": "Data & Analytics",
+      "description": "AI-powered business intelligence platform. Connect your data sources and get real-time dashboards, predictive analytics, and automated reports.",
+      "price": {
+        "monthly": 799,
+        "annual": 7670,
+        "currency": "AED"
+      },
+      "features": [
+        "Unlimited dashboards",
+        "AI-powered predictions",
+        "Automated scheduled reports",
+        "Excel, SQL, API connectors",
+        "Team collaboration tools",
+        "Arabic PDF export"
+      ]
+    },
+    {
+      "id": "P006",
+      "name": "MHDApp Builder",
+      "category": "App Development",
+      "description": "No-code/low-code mobile app development platform. Build iOS and Android apps visually with drag-and-drop — no programming required.",
+      "price": {
+        "monthly": 199,
+        "annual": 1910,
+        "currency": "AED",
+        "custom_development": "Starting from AED 15,000 for fully custom apps"
+      },
+      "features": [
+        "Drag-and-drop builder",
+        "iOS & Android publishing",
+        "Push notifications",
+        "Payment gateway integration",
+        "Arabic RTL support",
+        "App store submission assistance"
+      ]
+    }
+  ],
+  "pricing_plans": [
+    {
+      "name": "Starter",
+      "price": {
+        "monthly": 199,
+        "annual": 1910,
+        "currency": "AED"
+      },
+      "description": "Perfect for small businesses and startups",
+      "includes": [
+        "1 MHDChat AI agent",
+        "MHDCloud Starter hosting",
+        "Basic analytics",
+        "Email support",
+        "Up to 5 users"
+      ]
+    },
+    {
+      "name": "Professional",
+      "price": {
+        "monthly": 799,
+        "annual": 7670,
+        "currency": "AED"
+      },
+      "description": "Ideal for growing businesses",
+      "popular": true,
+      "includes": [
+        "3 MHDChat AI agents",
+        "MHDCloud Business hosting",
+        "MHDAnalytics Pro",
+        "Priority support (SLA 4h)",
+        "Up to 25 users",
+        "Custom integrations"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "price": {
+        "monthly": "Custom",
+        "currency": "AED"
+      },
+      "description": "For large organizations with complex needs",
+      "includes": [
+        "Unlimited AI agents",
+        "Dedicated cloud infrastructure",
+        "Full MHDSecure suite",
+        "Dedicated account manager",
+        "Unlimited users",
+        "On-site training & onboarding",
+        "Custom SLA & contracts"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is MHDTech?",
+      "answer": "MHDTech is a UAE-based technology company founded in 2018. We specialize in AI solutions, cloud hosting, cybersecurity, ERP systems, and digital transformation services for businesses across the GCC region."
+    },
+    {
+      "question": "Where is MHDTech located?",
+      "answer": "Our headquarters is at Dubai Internet City, Dubai, UAE. We also have support offices in Abu Dhabi and Riyadh. You can reach us at +971 4 800 6438 or support@mhdtech.com."
+    },
+    {
+      "question": "How much does MHDChat AI cost?",
+      "answer": "MHDChat AI starts at AED 299/month (billed monthly) or AED 2,870/year (saving 20%). This includes unlimited conversations, Arabic and English support, and website integration. Enterprise pricing is available for custom deployments."
+    },
+    {
+      "question": "Do you offer a free trial?",
+      "answer": "Yes! We offer a 14-day free trial on all our software products — no credit card required. You can sign up at www.mhdtech.com/trial or contact our sales team at sales@mhdtech.com."
+    },
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept credit/debit cards (Visa, Mastercard), bank transfers, and corporate invoicing. We support both monthly and annual billing. Enterprise clients can arrange custom payment terms."
+    },
+    {
+      "question": "Is your cloud hosting TDRA compliant?",
+      "answer": "Yes, MHDCloud is fully compliant with UAE TDRA (Telecommunications and Digital Government Regulatory Authority) regulations. Our datacenter is located within the UAE, ensuring your data stays in the country."
+    },
+    {
+      "question": "Do you support Arabic language?",
+      "answer": "Absolutely. All our products support Arabic language and RTL (right-to-left) interfaces natively. Our AI models are trained on Arabic and English data, and our support team speaks both languages."
+    },
+    {
+      "question": "What is your uptime guarantee?",
+      "answer": "MHDCloud provides a 99.99% uptime SLA, which means less than 52 minutes of downtime per year. We have redundant systems and real-time monitoring. If we fail to meet the SLA, clients receive service credits."
+    },
+    {
+      "question": "How long does it take to set up MHDChat AI?",
+      "answer": "Basic setup takes 1–3 business days. For custom AI training on your business data, it may take 5–10 business days. We handle the full setup and integration for you."
+    },
+    {
+      "question": "Can I integrate MHDTech products with my existing systems?",
+      "answer": "Yes. All our products offer RESTful APIs and support common integrations including Salesforce, Zoho, Microsoft 365, Google Workspace, WhatsApp Business, and more. Our integration team can also build custom connectors."
+    },
+    {
+      "question": "What is your refund policy?",
+      "answer": "We offer a 30-day money-back guarantee on all subscription plans. If you're not satisfied within the first 30 days, we'll issue a full refund — no questions asked. Custom development projects have separate terms."
+    },
+    {
+      "question": "How do I cancel my subscription?",
+      "answer": "You can cancel anytime from your account dashboard or by contacting support@mhdtech.com. For monthly plans, cancellation takes effect at the end of the current billing period. Annual plans are refunded on a pro-rata basis within the 30-day guarantee."
+    },
+    {
+      "question": "Do you offer custom software development?",
+      "answer": "Yes. Our development team can build fully custom web apps, mobile apps, AI systems, and enterprise platforms. Custom projects start from AED 15,000. Contact sales@mhdtech.com for a free quote."
+    },
+    {
+      "question": "What technical support do you provide?",
+      "answer": "All plans include email support. Professional plans get priority support with a 4-hour response SLA. Enterprise clients have a dedicated account manager and 24/7 emergency phone support at +971 4 800 6438."
+    },
+    {
+      "question": "How secure is my data?",
+      "answer": "We take security very seriously. All data is encrypted in transit (TLS 1.3) and at rest (AES-256). We are ISO 27001 aligned and conduct quarterly penetration tests. Data is stored in our UAE datacenter and never leaves the country."
+    },
+    {
+      "question": "Can I upgrade or downgrade my plan?",
+      "answer": "Yes, you can change your plan at any time. Upgrades take effect immediately, and you'll be charged a pro-rated amount. Downgrades take effect at the start of your next billing cycle."
+    },
+    {
+      "question": "Do you offer discounts for non-profits or startups?",
+      "answer": "Yes! We offer a 30% discount for registered non-profit organizations and a 20% startup discount for companies less than 2 years old. Contact sales@mhdtech.com with your registration documents to apply."
+    },
+    {
+      "question": "What industries do you serve?",
+      "answer": "We serve businesses across all industries including retail, healthcare, finance, real estate, education, logistics, and government. Our solutions are adaptable and have been deployed in 15+ countries."
+    },
+    {
+      "question": "How does MHDAnalytics connect to my data?",
+      "answer": "MHDAnalytics connects to 100+ data sources including Excel files, SQL databases (MySQL, PostgreSQL, MSSQL), Google Sheets, REST APIs, Salesforce, and more. The integration wizard guides you through in minutes."
+    },
+    {
+      "question": "What is the contract length?",
+      "answer": "No long-term commitments required! Monthly plans can be cancelled anytime. Annual plans are prepaid for 12 months with a 20% discount. Enterprise plans typically have 1–3 year contracts with custom terms."
+    }
+  ],
+  "policies": {
+    "refund_policy": {
+      "title": "Refund Policy",
+      "details": [
+        "30-day money-back guarantee on all new subscriptions",
+        "Full refund if cancellation is within 30 days of first payment",
+        "Annual plans are pro-rated after the 30-day window",
+        "Custom development projects are non-refundable once work begins",
+        "Hardware products (servers, devices) are non-refundable after delivery",
+        "Refunds are processed within 5–10 business days"
+      ]
+    },
+    "privacy_policy": {
+      "title": "Privacy Policy",
+      "details": [
+        "We collect only data necessary to provide our services",
+        "Personal data is stored in UAE-based servers and never transferred outside the UAE without consent",
+        "We do not sell or share your data with third parties for marketing purposes",
+        "Data is retained for the duration of your contract plus 12 months",
+        "You can request data deletion at privacy@mhdtech.com",
+        "We are fully compliant with UAE Federal Decree-Law No. 45 of 2021 on Personal Data Protection"
+      ]
+    },
+    "service_level_agreement": {
+      "title": "Service Level Agreement (SLA)",
+      "uptime_targets": {
+        "cloud_hosting": "99.99%",
+        "ai_services": "99.9%",
+        "erp_platform": "99.9%"
+      },
+      "support_response_times": {
+        "starter": "24 business hours (email only)",
+        "professional": "4 hours (email + phone)",
+        "enterprise": "1 hour (email + phone + dedicated manager)"
+      },
+      "credits": "If uptime falls below guaranteed levels, clients receive service credits of up to 30% of their monthly fee"
+    },
+    "terms_of_service": {
+      "title": "Terms of Service",
+      "key_points": [
+        "Services are provided 'as is' and are subject to these terms",
+        "Users must be 18+ and have authority to enter contracts",
+        "Prohibited uses include illegal activities, spam, and abuse of our AI systems",
+        "We reserve the right to suspend accounts that violate our Acceptable Use Policy",
+        "Governing law: UAE Federal Law, disputes resolved in Dubai Courts",
+        "We may update terms with 30 days notice"
+      ]
+    },
+    "warranty": {
+      "title": "Warranty Policy",
+      "software": "All software products are covered by a 12-month bug-fix warranty. We will fix any confirmed bugs at no additional cost.",
+      "custom_development": "Custom development projects include 6 months of free bug fixes after delivery.",
+      "hardware": "Hardware products carry a 1-year manufacturer warranty handled through MHDTech."
+    }
+  },
+  "support_channels": [
+    {
+      "channel": "Email Support",
+      "contact": "support@mhdtech.com",
+      "hours": "24/7 (response within SLA)",
+      "availability": "All plans"
+    },
+    {
+      "channel": "Phone Support",
+      "contact": "+971 4 800 6438",
+      "hours": "Sun–Thu, 9AM–6PM",
+      "availability": "Professional & Enterprise"
+    },
+    {
+      "channel": "WhatsApp",
+      "contact": "+971 50 800 6438",
+      "hours": "Sun–Thu, 9AM–9PM",
+      "availability": "All plans"
+    },
+    {
+      "channel": "Live Chat",
+      "contact": "www.mhdtech.com",
+      "hours": "24/7 AI chat, human agents Sun–Thu 9AM–6PM",
+      "availability": "All plans"
+    },
+    {
+      "channel": "Dedicated Manager",
+      "contact": "Assigned on signup",
+      "hours": "Custom SLA",
+      "availability": "Enterprise only"
+    }
+  ]
+}

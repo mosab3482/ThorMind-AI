@@ -10,8 +10,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^3.0.53",
+    "@ai-sdk/ui-utils": "^1.2.11",
     "@datastax/astra-db-ts": "^1.1.0",
-    "ai": "^6.0.168",
+    "ai": "^3.4.33",
     "dotenv": "^16.4.5",
     "langchain": "^0.1.36",
     "next": "16.2.4",

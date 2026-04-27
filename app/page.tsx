@@ -1,43 +1,95 @@
+"use client"
 import Image from "next/image"
-import ThorMindLogo from "./assets/thorMindLogo.png"
 import { useChat } from "ai/react"
-import { message } from "ai"
+import type { Message } from "ai/react"
 import Bubble from "./components/bubble"
 import LoadingBubble from "./components/loadingBubble"
 import PromptSuggestionsRow from "./components/promptSuggestionRow"
+import mhdtechLogo from "./assets/mhdtechLogo.png"
+
 const Home = () => {
     const { append, isLoading, messages, handleInputChange, input, handleSubmit } = useChat()
     const noMessages = !messages || messages.length === 0
 
-    const handlePrompt = (promptText) => {
-        const msg: message = {
+    const handlePrompt = (promptText: string) => {
+        const msg: Message = {
             id: crypto.randomUUID(),
             content: promptText,
             role: "user"
         }
         append(msg)
     }
+
     return (
         <main>
-            <Image src={ThorMindLogo} alt="ThorMind Logo" width={100} height={100} />
-            <section className={noMessages ? "" : "populated"}>
-                {noMessages ? (
-                    <>
-                        <p className="starter-text">...</p>
-                        <br />
-                        <PromptSuggestionsRow onPromptClick={handlePrompt} />
-                    </>
-                ) : (
-                    <>
-                        {messages.map((message, index) => <Bubble key={`message-${index}`} message={message} />)}
-                        {isLoading && <LoadingBubble />}
+            <header className="header">
+                <div className="header-inner">
+                    <div className="logo-area">
+                        <Image src={mhdtechLogo} alt="MHDTech Logo" width={180} height={50} className="logo" priority />
+                    </div>
+                    <div className="header-info">
+                        <span className="status-dot"></span>
+                        <span className="status-text">AI Assistant Online</span>
+                    </div>
+                </div>
+            </header>
 
-                    </>
-                )}
-            </section>
-            <form onSubmit={handleSubmit}>
-                <input className="question-box" onChange={handleInputChange} value={input} placeholder="Ask me ..." />
-            </form>
+            <div className="chat-wrapper">
+                <section className={`chat-section ${noMessages ? "" : "populated"}`}>
+                    {noMessages ? (
+                        <div className="welcome-screen">
+                            <div className="welcome-icon">
+                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="64" height="64" rx="16" fill="url(#grad1)" />
+                                    <path d="M20 24h24M20 32h16M20 40h20" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
+                                    <defs>
+                                        <linearGradient id="grad1" x1="0" y1="0" x2="64" y2="64">
+                                            <stop offset="0%" stopColor="#0066ff" />
+                                            <stop offset="100%" stopColor="#00d4ff" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <h1 className="welcome-title">مرحباً بك في MHDTech AI</h1>
+                            <p className="welcome-subtitle">
+                                أنا Aria، مساعدك الذكي من MHDTech 🚀<br />
+                                اسألني عن منتجاتنا، الأسعار، السياسات، أو أي شيء آخر!
+                            </p>
+                            <p className="welcome-subtitle-en">
+                                I&apos;m Aria, your intelligent assistant from MHDTech.<br />
+                                Ask me about our products, pricing, policies, or anything else!
+                            </p>
+                            <PromptSuggestionsRow onPromptClick={handlePrompt} />
+                        </div>
+                    ) : (
+                        <div className="messages-container">
+                            {messages.map((message, index) => (
+                                <Bubble key={`message-${index}`} message={message} />
+                            ))}
+                            {isLoading && <LoadingBubble />}
+                        </div>
+                    )}
+                </section>
+            </div>
+
+            <div className="input-area">
+                <form onSubmit={handleSubmit} className="input-form">
+                    <input
+                        className="question-box"
+                        onChange={handleInputChange}
+                        value={input}
+                        placeholder="اسألني عن MHDTech... / Ask me about MHDTech..."
+                        disabled={isLoading}
+                    />
+                    <button type="submit" className="send-btn" disabled={isLoading || !input.trim()}>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M22 2L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                    </button>
+                </form>
+                <p className="footer-note">MHDTech AI Assistant — Dubai Internet City, UAE · support@mhdtech.com</p>
+            </div>
         </main>
     )
 }
