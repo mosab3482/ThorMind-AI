@@ -6,12 +6,12 @@ interface PromptSuggestionRowProps {
 
 const PromptSuggestionRow = ({ onPromptClick }: PromptSuggestionRowProps) => {
     const prompts = [
-        "ما هي منتجات MHDTech؟",
-        "What are MHDTech's pricing plans?",
-        "كم تكلف خدمة MHDChat AI؟",
+        "ما هي منتجات ThroMind؟",
+        "What are ThroMind's pricing plans?",
+        "كم تكلف خدمة ThroChat AI؟",
         "Do you offer a free trial?",
         "ما هي سياسة الاسترداد؟",
-        "How secure is my data with MHDTech?",
+        "How secure is my data with ThroMind?",
     ]
 
     return (

@@ -25,9 +25,9 @@ const splitter = new RecursiveCharacterTextSplitter({
   chunkOverlap: 100,
 });
 
-/** Load MHDTech company data from JSON and convert to plain text chunks */
-const loadMHDTechData = (): string => {
-  const dataPath = path.join(__dirname, "../app/data/mhdtech.json");
+/** Load ThroMind company data from JSON and convert to plain text chunks */
+const loadThroMindData = (): string => {
+  const dataPath = path.join(__dirname, "../app/data/thromind.json");
   const raw = fs.readFileSync(dataPath, "utf-8");
   const data = JSON.parse(raw);
 
@@ -93,9 +93,9 @@ const createCollection = async (
 
 const loadData = async () => {
   const collection = await db.collection(ASTRA_DB_COLLECTION!);
-  console.log("📄 Loading MHDTech data from JSON...");
+  console.log("📄 Loading ThroMind data from JSON...");
 
-  const content = loadMHDTechData();
+  const content = loadThroMindData();
   const chunks = await splitter.splitText(content);
 
   console.log(`📦 Splitting into ${chunks.length} chunks...`);
@@ -116,7 +116,7 @@ const loadData = async () => {
     console.log(`✅ Inserted chunk ${i + 1}/${chunks.length}:`, res);
   }
 
-  console.log("🎉 Database seeded successfully with MHDTech data!");
+  console.log("🎉 Database seeded successfully with ThroMind data!");
 };
 
 createCollection().then(() => {

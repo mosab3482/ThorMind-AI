@@ -2,12 +2,12 @@ import type { Metadata } from "next"
 import "./global.css"
 
 export const metadata: Metadata = {
-    title: "MHDTech AI Assistant — Next-Generation Technology Solutions",
-    description: "Chat with Aria, MHDTech's AI assistant. Get instant answers about our products, pricing, policies, and services. Dubai Internet City, UAE.",
-    keywords: "MHDTech, AI assistant, tech solutions, Dubai, UAE, cloud hosting, cybersecurity, ERP, AI chatbot",
+    title: "ThroMind AI Assistant — Next-Generation Technology Solutions",
+    description: "Chat with MHD, ThroMind's AI assistant. Get instant answers about our products, pricing, policies, and services. Sudan.",
+    keywords: "ThroMind, AI assistant, tech solutions, Sudan, cloud hosting, cybersecurity, ERP, AI chatbot",
     openGraph: {
-        title: "MHDTech AI Assistant",
-        description: "Your intelligent AI assistant from MHDTech — Dubai, UAE",
+        title: "ThroMind AI Assistant",
+        description: "Your intelligent AI assistant from ThroMind — Sudan",
         type: "website",
     }
 }

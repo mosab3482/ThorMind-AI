@@ -5,7 +5,7 @@ import type { Message } from "ai/react"
 import Bubble from "./components/bubble"
 import LoadingBubble from "./components/loadingBubble"
 import PromptSuggestionsRow from "./components/promptSuggestionRow"
-import mhdtechLogo from "./assets/mhdtechLogo.png"
+import thromindLogo from "./assets/thromindLogo.png"
 
 const Home = () => {
     const { append, isLoading, messages, handleInputChange, input, handleSubmit } = useChat()
@@ -25,7 +25,7 @@ const Home = () => {
             <header className="header">
                 <div className="header-inner">
                     <div className="logo-area">
-                        <Image src={mhdtechLogo} alt="MHDTech Logo" width={180} height={50} className="logo" priority />
+                        <Image src={thromindLogo} alt="ThroMind Logo" width={180} height={50} className="logo" priority />
                     </div>
                     <div className="header-info">
                         <span className="status-dot"></span>
@@ -50,13 +50,13 @@ const Home = () => {
                                     </defs>
                                 </svg>
                             </div>
-                            <h1 className="welcome-title">مرحباً بك في MHDTech AI</h1>
+                            <h1 className="welcome-title">مرحباً بك في ThroMind AI</h1>
                             <p className="welcome-subtitle">
-                                أنا Aria، مساعدك الذكي من MHDTech 🚀<br />
+                                أنا MHD، مساعدك الذكي من ThroMind 🚀<br />
                                 اسألني عن منتجاتنا، الأسعار، السياسات، أو أي شيء آخر!
                             </p>
                             <p className="welcome-subtitle-en">
-                                I&apos;m Aria, your intelligent assistant from MHDTech.<br />
+                                I&apos;m MHD, your intelligent assistant from ThroMind.<br />
                                 Ask me about our products, pricing, policies, or anything else!
                             </p>
                             <PromptSuggestionsRow onPromptClick={handlePrompt} />
@@ -78,7 +78,7 @@ const Home = () => {
                         className="question-box"
                         onChange={handleInputChange}
                         value={input}
-                        placeholder="اسألني عن MHDTech... / Ask me about MHDTech..."
+                        placeholder="اسألني عن ThroMind... / Ask me about ThroMind..."
                         disabled={isLoading}
                     />
                     <button type="submit" className="send-btn" disabled={isLoading || !input.trim()}>
@@ -88,7 +88,7 @@ const Home = () => {
                         </svg>
                     </button>
                 </form>
-                <p className="footer-note">MHDTech AI Assistant — Dubai Internet City, UAE · support@mhdtech.com</p>
+                <p className="footer-note">ThroMind AI Assistant — Sudan · support@thromind.com</p>
             </div>
         </main>
     )
